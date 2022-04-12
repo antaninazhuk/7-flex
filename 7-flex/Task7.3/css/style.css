@@ -1,0 +1,476 @@
+     /* Указываем box sizing */
+     
+     *,
+     *::before,
+     *::after {
+         box-sizing: border-box;
+     }
+     /* Убираем внутренние отступы */
+     
+     ul[class],
+     ol[class] {
+         padding: 0;
+     }
+     /* Убираем внешние отступы */
+     
+     body,
+     h1,
+     h2,
+     h3,
+     h4,
+     p,
+     ul[class],
+     ol[class],
+     li,
+     figure,
+     figcaption,
+     blockquote,
+     dl,
+     dd {
+         margin: 0;
+     }
+     /* Выставляем основные настройки по-умолчанию для body */
+     
+     body {
+         min-height: 100vh;
+         scroll-behavior: smooth;
+         text-rendering: optimizeSpeed;
+         line-height: 1.5;
+     }
+     /* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+     
+     ul[class],
+     ol[class] {
+         list-style: none;
+     }
+     /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+     
+     a:not([class]) {
+         text-decoration-skip-ink: auto;
+     }
+     /* Упрощаем работу с изображениями */
+     
+     img {
+         max-width: 100%;
+         display: block;
+     }
+     /* Указываем понятную периодичность в потоке данных у article*/
+     
+     article>*+* {
+         margin-top: 1em;
+     }
+     /* Наследуем шрифты для инпутов и кнопок */
+     
+     input,
+     button,
+     textarea,
+     select {
+         font: inherit;
+     }
+     /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+     
+     @media (prefers-reduced-motion: reduce) {
+         * {
+             animation-duration: 0.01ms !important;
+             animation-iteration-count: 1 !important;
+             transition-duration: 0.01ms !important;
+             scroll-behavior: auto !important;
+         }
+     }
+     
+     .container {
+         max-width: 1200px;
+         margin: auto;
+     }
+     
+     body {
+         font-family: Arial;
+         font-size: 15px;
+     }
+     
+     header {
+         padding: 60px 0;
+         background-color: #fff;
+         position: absolute;
+         width: 1200px;
+         left: 50%;
+         transform: translate(-600px);
+         background-color: rgb(37, 16, 0, 0);
+         z-index: 2;
+     }
+     
+     .flex-parent {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+     }
+     
+     nav ul {
+         display: flex;
+         list-style: none;
+     }
+     
+     nav ul li {
+         margin-left: 35px;
+     }
+     
+     .logo a {
+         font-family: Georgia;
+         font-size: 32px;
+         text-decoration: none;
+         color: #F1CDB3;
+     }
+     
+     .logo p {
+         font-size: 13px;
+         color: #FFFFFF;
+         margin-top: 10px;
+         letter-spacing: 0.06em;
+     }
+     
+     nav a {
+         text-decoration: none;
+         color: #CDCDCD;
+         display: block;
+         padding-bottom: 4px;
+     }
+     
+     .active {
+         border-bottom: 3px solid #FAFAFA;
+         color: #FAFAFA;
+     }
+     
+     .active:hover {
+         border-bottom: none;
+     }
+     
+     .blok-one-img {
+         padding: 343px 0px 244px;
+         background-image: linear-gradient(90.26deg, #7D604B 0.23%, #251000 99.8%);
+     }
+     
+     .start-screen-puppy {
+         position: absolute;
+         top: -162px;
+         right: 0px;
+         width: 698px;
+         height: 728px;
+     }
+     
+     .parent-flex-puppy {
+         position: relative;
+     }
+     
+     .main-text {
+         max-width: 460px;
+     }
+     
+     .blok-one-img h1 {
+         font-family: 'Georgia';
+         font-size: 44px;
+         line-height: 130%;
+         color: #FFFFFF;
+         margin-bottom: 42px;
+     }
+     
+     .blok-one-img p {
+         line-height: 160%;
+         display: flex;
+         align-items: center;
+         color: #CDCDCD;
+         margin-bottom: 41px;
+     }
+     
+     .main-text a {
+         display: inline-block;
+         padding: 15px 45px;
+         background-color: #F1CDB3;
+         text-decoration: none;
+         font-family: 'Georgia';
+         font-size: 17px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         color: #292929;
+         border-radius: 100px;
+     }
+     
+     .background-gray {
+         background-color: #F6F6F6;
+     }
+     
+     .about-the-shelter {
+         padding: 80px 0 100px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     
+     .about-the-shelter img {
+         width: 300px;
+         height: 408px;
+     }
+     
+     .text-about-the-shelter {
+         max-width: 430px;
+         margin-left: 126px;
+     }
+     
+     h2 {
+         font-weight: normal;
+         font-family: 'Georgia';
+         font-size: 35px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         color: #545454;
+     }
+     
+     .text-about-the-shelter p {
+         margin-top: 25px;
+         line-height: 160%;
+         color: #4C4C4C;
+     }
+     
+     .our-friends {
+         padding: 80px 0 100px;
+     }
+     
+     .sections-our-friends {
+         display: flex;
+         justify-content: center;
+         padding: 60px 0;
+     }
+     
+     .our-friends h2 {
+         text-align: center;
+         max-width: 400px;
+         margin: auto;
+     }
+     
+     .sections-our-friends section {
+         margin-right: 90px;
+         background-color: #FAFAFA;
+         text-align: center;
+         padding-bottom: 30px;
+     }
+     
+     .sections-our-friends section:last-child {
+         margin-right: 0;
+     }
+     
+     .sections-our-friends p {
+         margin: 30px 0;
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 23px;
+         letter-spacing: 0.06em;
+         color: #545454;
+     }
+     
+     .sections-our-friends a {
+         text-decoration: none;
+     }
+     
+     .sections-our-friends .knopka {
+         display: inline-block;
+         border: 2px solid #F1CDB3;
+         border-radius: 100px;
+         padding: 15px 45px;
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 17px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         color: #292929;
+     }
+     
+     .sections-our-friends .knopka:hover {
+         background-color: #FDDCC4;
+     }
+     
+     .to-know a {
+         display: inline-block;
+         background-color: #F1CDB3;
+         border-radius: 100px;
+         padding: 15px 45px;
+         text-decoration: none;
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 17px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         color: #292929;
+     }
+     
+     .to-know {
+         text-align: center;
+     }
+     
+     .how-ou-can-help {
+         padding: 80px 80px 98px;
+     }
+     
+     .icons-how-ou-can-help {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+     
+     .icons {
+         margin-right: 120px;
+         margin-bottom: 55px;
+     }
+     
+     .icons:nth-child(5),
+     .icons:last-child {
+         margin-right: 0;
+     }
+     
+     .how-ou-can-help h2 {
+         text-align: center;
+         max-width: 308px;
+         margin: auto;
+         margin-bottom: 60px;
+     }
+     
+     .icons p {
+         margin-top: 30px;
+         text-align: center;
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 20px;
+         letter-spacing: 0.06em;
+         color: #545454;
+     }
+     
+     .icons img {
+         margin: auto;
+     }
+     
+     .donation {
+         display: flex;
+         align-items: center;
+         padding: 92px 140px 101px;
+     }
+     
+     .donation img {
+         width: 505px;
+         height: 261px;
+     }
+     
+     .text-donation {
+         max-width: 380px;
+         margin-left: 30px;
+     }
+     
+     .text-donation p {
+         margin-top: 20px;
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 15px;
+         letter-spacing: 0.06em;
+         color: #545454;
+     }
+     
+     .text-donation .italic-text-donation {
+         font-family: 'Arial';
+         font-style: italic;
+         font-size: 12px;
+         line-height: 18px;
+         color: #B2B2B2;
+     }
+     
+     .text-donation .number-card {
+         background-color: #F1CDB3;
+         border-radius: 9px;
+         padding: 10px 15px;
+         font-size: 20px;
+         text-align: center;
+         vertical-align: middle;
+     }
+     
+     .number-card::before {
+         content: '';
+         background-image: url(../img/credit-card.svg);
+         display: inline-block;
+         width: 30px;
+         height: 23px;
+         margin-right: 15px;
+         vertical-align: middle;
+     }
+     
+     .footer-flex {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding-top: 40px;
+     }
+     
+     footer {
+         background-image: linear-gradient(90.26deg, #7D604B 0.23%, #251000 99.8%);
+     }
+     
+     footer img {
+         width: 300px;
+         height: 310px;
+     }
+     
+     footer h3 {
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 35px;
+         line-height: 130%;
+         letter-spacing: 0.06em;
+         color: #FFFFFF;
+     }
+     
+     .inf-footer-right,
+     .inf-footer-left {
+         min-height: 234px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+     }
+     
+     .inf-footer-right {
+         width: 302px;
+     }
+     
+     .inf-footer-left {
+         width: 279px;
+     }
+     
+     footer p,
+     footer p a {
+         font-family: 'Georgia';
+         font-weight: 400;
+         font-size: 20px;
+         line-height: 115%;
+         letter-spacing: 0.06em;
+         color: #F1CDB3;
+     }
+     
+     footer p a {
+         text-decoration: none;
+     }
+     
+     .mail {
+         background-image: url(../img/icon-email.svg);
+         background-repeat: no-repeat;
+         background-position-y: center;
+         padding: 7px 0 7px 55px;
+     }
+     
+     .tel {
+         background-image: url(../img/icon-phone.svg);
+         background-repeat: no-repeat;
+         background-position-y: center;
+         padding: 7px 0 7px 55px;
+     }
+     
+     .adress {
+         background-image: url(../img/icon-marker.svg);
+         background-repeat: no-repeat;
+         background-position-y: center;
+         padding: 7px 0 7px 37px;
+     }
